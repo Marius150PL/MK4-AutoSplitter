@@ -7,9 +7,10 @@
 * Please leave some feedback on how well the AutoSplitter works and report bugs.        *
 \***************************************************************************************/
 
-state("mk4"){	
-    int chosenDestiny0: "mk4.exe", 0x1F31C, 0x2EC;
-    short chosenDestiny1: "mk4.exe", 0x13880C, 0x240;
+state("mk4"){
+    short chosenDestiny0: "mk4.exe", 0xD7B7C, 0x4A4;
+    short chosenDestiny1: "mk4.exe", 0x1F31C, 0x394;
+    short chosenDestiny2: "mk4.exe", 0x1F31C, 0x2E8;
     int firstEnemy: "mk4.exe", 0x895CC, 0x4;
     int enemyCharId0: "mk4.exe", 0x223B0, 0x0;
     int enemyCharId1: "mk4.exe", 0x22380, 0x0;
@@ -21,7 +22,7 @@ state("mk4"){
 
 start{
     if(current.scene0 == 723 && current.scene1 == 177){
-        if(current.chosenDestiny0 == 140 || current.chosenDestiny1 == 31422){
+        if(current.chosenDestiny0 != 0 || current.chosenDestiny1 == 8448 || current.chosenDestiny2 == 31176){
             return true;
         }
     }
