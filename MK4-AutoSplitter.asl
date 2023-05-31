@@ -20,7 +20,7 @@ state("mk4"){
 }
 
 start{
-    if(current.scene0 == 723 && current.scene1 == 177){
+    if((current.scene0 == 723 && current.scene1 == 177) || (current.scene0 == 369 && current.scene1 == 245)){
         if((current.chosenDestiny0 == 0 && old.chosenDestiny0 != 0) || current.chosenDestiny1 != old.chosenDestiny1){
             return true;
         }
