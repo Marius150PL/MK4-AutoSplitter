@@ -2,7 +2,7 @@
 
 ### Autosplitter for [LiveSplit](https://github.com/LiveSplit/LiveSplit/releases) of Mortal Kombat 4 (PC).
 
-AutoSplitter starts when you Choose Your Destiny, splits when level loads and resets on Main Menu.
+AutoSplitter starts when you Choose Your Destiny, splits when level changes and resets on Main Menu.
 
 In future there might be added support for allowed emulators for console versions.
 
@@ -12,7 +12,7 @@ In future there might be added support for allowed emulators for console version
 
 | Name | Type | Module | OS0 | OSs | Description |
 |---|---|---|---|---|---|
-| chosenDestiny0 | int | mk4.exe | 0xCF70 | 0x224, 0x58,... | `0` when ladder is chosen. |
+| chosenDestiny0 | int | mk4.exe | 0xEE9D0 | 0x208 | `0` when ladder is chosen. |
 | chosenDestiny1 | int | mk4.exe | 0x3A6BB8 | 0xA8 | 4 different values. Only changes when ladder is chosen. |
 | firstEnemy | int | mk4.exe | 0x895CC | 0x4 | `1` if you chose destiny and you are playing against the 1st enemy. Otherwise `0`. |
 | enemyCharId0 | int | mk4.exe | 0x223B0 | 0x0 | Changes when Loading in Ladder appears, not changes when you continue. `8` when Shinnok. |
